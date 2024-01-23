@@ -1,2 +1,9 @@
 pandas
 pre-commit
+jupyter
+pre-commit
+nbstripout
+flake8
+flake8-nb
+black
+jupyter-black
