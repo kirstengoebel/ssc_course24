@@ -10,3 +10,6 @@ jupyter-black
 matplotlib
 seaborn
 numpy
+snakeviz
+sphinx
+pytest
