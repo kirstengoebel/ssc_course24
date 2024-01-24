@@ -1,10 +1,15 @@
 import random
 
+import numpy as np
 import pandas as pd
 import pytest
 
 from analysis_measured_data.exceptions import InputNotValidException
-from analysis_measured_data.input_reading import read_file, make_time_to_index
+from analysis_measured_data.input_reading import (
+    read_file,
+    make_time_to_index,
+    pandas_to_numpy,
+)
 
 
 def test_read_file_correct_input():
@@ -52,3 +57,14 @@ def test_set_time_as_index_without_time_column():
     assert test_data.index[0] == 0
     with pytest.raises(InputNotValidException):
         make_time_to_index(test_data)
+
+
+def test_pandas_to_numpy():
+    test_data = pd.DataFrame(
+        {
+            "value1": [random.randint(0, 100) for _ in range(100)],
+            "value2": [random.randint(0, 100) for _ in range(100)],
+        }
+    )
+    result = pandas_to_numpy(test_data)
+    assert np.allclose(test_data.values, result, atol=0.01)
