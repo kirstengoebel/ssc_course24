@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 import pandas as pd
-import exceptions
+
+from analysis_measured_data.exceptions import InputNotValidException
 
 
 def make_time_to_index(df: pd.DataFrame) -> pd.DataFrame:
@@ -13,7 +14,7 @@ def make_time_to_index(df: pd.DataFrame) -> pd.DataFrame:
     """
 
     if "time" not in df.columns:
-        raise exceptions.InputNotValidException("time column not found")
+        raise InputNotValidException("time column not found")
     return df.set_index("time")
 
 
