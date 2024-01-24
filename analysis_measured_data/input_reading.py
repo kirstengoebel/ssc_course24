@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import pandas as pd
+import numpy as np
 
 from analysis_measured_data.exceptions import InputNotValidException
 
@@ -16,6 +17,10 @@ def make_time_to_index(df: pd.DataFrame) -> pd.DataFrame:
     if "time" not in df.columns:
         raise InputNotValidException("time column not found")
     return df.set_index("time")
+
+
+def pandas_to_numpy(df: pd.DataFrame) -> np.ndarray:
+    return df.to_numpy()
 
 
 def read_file(path: str) -> pd.DataFrame:
