@@ -18,6 +18,14 @@ def make_time_to_index(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def read_file(path: str) -> pd.DataFrame:
+    """
+    Read a file from the given path and return it as a pandas DataFrame.
+
+    :param path: Path of the file to be read.
+    :type path: str
+    :return: The content of the file as a pandas DataFrame.
+    :rtype: pd.DataFrame
+    """
     df = pd.read_csv(
         path,
         sep=r"\s+",
