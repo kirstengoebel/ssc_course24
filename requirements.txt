@@ -14,3 +14,4 @@ snakeviz
 sphinx
 pytest
 myst-parser
+sphinx-rtd-theme
