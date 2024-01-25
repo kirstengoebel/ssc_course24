@@ -5,19 +5,33 @@ from analysis_measured_data.exceptions import InputNotValidException
 
 
 def make_time_to_index(df: pd.DataFrame) -> pd.DataFrame:
-    """Takes the time column and sets it as the dataframe index
-
-    Input:
-        df  pd.DataFrame    input dataframe
-
     """
+    Args:
+        df: A Pandas DataFrame representing the input data.
 
+    Returns:
+        A Pandas DataFrame with the "time" column set as the index.
+
+    Raises:
+        InputNotValidException: If the "time" column is not present
+         in the input DataFrame.
+    """
     if "time" not in df.columns:
         raise InputNotValidException("time column not found")
     return df.set_index("time")
 
 
 def pandas_to_numpy(df: pd.DataFrame) -> np.ndarray:
+    """
+    Converts a pandas DataFrame to a numpy ndarray.
+
+    Args:
+        df (pd.DataFrame): The pandas DataFrame to be converted.
+
+    Returns:
+        np.ndarray: The numpy ndarray representation of the DataFrame.
+
+    """
     return df.to_numpy()
 
 
