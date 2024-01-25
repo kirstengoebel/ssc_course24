@@ -10,7 +10,8 @@ Welcome to ssc_cource24's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   readme_link
+   license_link
 
 Indices and tables
 ==================
