@@ -13,3 +13,4 @@ numpy
 snakeviz
 sphinx
 pytest
+myst-parser

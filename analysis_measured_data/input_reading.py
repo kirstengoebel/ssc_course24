@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import pandas as pd
 import numpy as np
 
@@ -25,12 +23,22 @@ def pandas_to_numpy(df: pd.DataFrame) -> np.ndarray:
 
 def read_file(path: str) -> pd.DataFrame:
     """
-    Read a file from the given path and return it as a pandas DataFrame.
+    Read a data file into a pandas dataframe
 
-    :param path: Path of the file to be read.
-    :type path: str
-    :return: The content of the file as a pandas DataFrame.
-    :rtype: pd.DataFrame
+    Args:
+        path: A string representing the path of the file to be read.
+
+    Returns:
+        A pandas DataFrame representing the contents of the file.
+
+    Example:
+        >>> read_file("data.csv")
+              Column1  Column2
+        0         1        5
+        1         2        6
+        2         3        7
+        3         4        8
+
     """
     df = pd.read_csv(
         path,
