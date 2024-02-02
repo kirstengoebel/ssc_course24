@@ -13,5 +13,6 @@ numpy
 snakeviz
 sphinx
 pytest
+pytest-cov
 myst-parser
 sphinx-rtd-theme

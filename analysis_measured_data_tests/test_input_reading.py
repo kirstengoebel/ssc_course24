@@ -13,7 +13,7 @@ from analysis_measured_data.input_reading import (
 
 
 def test_read_file_correct_input():
-    file_name = "../data/efield.t"
+    file_name = "data/efield.t"
     result = read_file(file_name)
     assert result is not None
     assert isinstance(result, pd.DataFrame)
