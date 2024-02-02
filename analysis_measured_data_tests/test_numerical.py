@@ -19,6 +19,7 @@ def test_fourier_transform():
     expected_result = np.fft.fft([1, 2, 3, 4, 5])
 
     # Assert the result is almost equal to the expected result
+    # this is a change for the docs
     np.testing.assert_almost_equal(result, expected_result)
 
 

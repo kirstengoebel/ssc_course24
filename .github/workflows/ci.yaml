@@ -38,3 +38,6 @@ jobs:
     - name: run tests
       run: |
         python -m pytest
+    - name: add sphinx doc creation
+      run: | 
+        sphinx-apidoc -o docs/source analysis_measured_data
