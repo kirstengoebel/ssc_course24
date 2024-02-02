@@ -2,3 +2,4 @@
 output/
 figures/
 docs/build/
+__pycache__
